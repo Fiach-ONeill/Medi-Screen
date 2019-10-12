@@ -1,6 +1,7 @@
 package edu.cit.patients.service;
 
 import edu.cit.patients.model.Patient;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -14,7 +15,9 @@ public interface PatientService {
 
     void savePatient(Patient patient);
 
-    void updatePatientInfo(String emailOld, String emailNew);
+    void updatePatientInfo(String email, Patient patient);
+
+    void updatePatientEmail(String emailOld, String emailNew);
 
     void deletePatient(String id);
 }

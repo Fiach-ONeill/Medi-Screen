@@ -35,7 +35,16 @@ public class PatientServiceImpl implements PatientService {
     }
 
     @Override
-    public void updatePatientInfo(String emailOld, String emailNew) {
+    public void updatePatientInfo(String email, Patient patient) {
+        Patient dbPatient = patientRepository.findByEmail(email);
+        patient.setCreatedDate(dbPatient.getCreatedDate());
+        patient.setId(dbPatient.getId());
+        patient.setVersion(dbPatient.getVersion());
+        patientRepository.save(patient);
+    }
+
+    @Override
+    public void updatePatientEmail(String emailOld, String emailNew) {
         Patient dbPatient = patientRepository.findByEmail(emailOld);
         dbPatient.setEmail(emailNew);
         patientRepository.save(dbPatient);

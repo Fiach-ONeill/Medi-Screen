@@ -202,6 +202,14 @@ public class Patient {
     }
 
 
+    public void setVersion(Long version) {
+        this.version = version;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
     }

@@ -37,10 +37,16 @@ public class PatientController {
         return new ResponseEntity("Patient added succesfully", HttpStatus.OK);
     }
 
-    @PatchMapping(value = "/{email}")
-    public ResponseEntity<?> updatePatient(@PathVariable("email") String emailOld, @RequestBody String emailNew) {
-        patientService.updatePatientInfo(emailOld, emailNew);
+    @PutMapping(value = "/{email}")
+    public ResponseEntity<?> updatePatientInfo(@PathVariable("email") String email, @RequestBody Patient patient) {
+        patientService.updatePatientInfo(email, patient);
         return new ResponseEntity("Patient updated succesfully", HttpStatus.OK);
+    }
+
+    @PatchMapping(value = "/{email}")
+    public ResponseEntity<?> updatePatientEmail(@PathVariable("email") String emailOld, @RequestBody String emailNew) {
+        patientService.updatePatientEmail(emailOld, emailNew);
+        return new ResponseEntity("Patient Email updated succesfully", HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/{email}")
