@@ -1,12 +1,13 @@
 package edu.cit.patients.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Version;
 import org.springframework.data.mongodb.core.mapping.Document;
-import sun.util.calendar.LocalGregorianCalendar;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Document(collection = "patients")
@@ -32,7 +33,8 @@ public class Patient {
 
     private String medicCode;
 
-    private Date dateOfBirth;
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private LocalDate dateOfBirth;
 
     private char sex;
 
@@ -107,7 +109,7 @@ public class Patient {
         return medicCode;
     }
 
-    public Date getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
@@ -224,7 +226,7 @@ public class Patient {
         this.medicCode = medicCode;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -321,7 +323,7 @@ public class Patient {
 
     }
 
-    public Patient(String firstName, String lastName, String email, String medicCode, Date dateOfBirth, char sex, float cp, float trestbps, float cholesterol, float fbs, float thalach, float exang, float oldpeak, float slope, float ca, int noPregnancies, float glucose, float bloodPressure, float skinThickness, float insulin, float bmi, float diabetesPedigree, float meanRadius, float meanTexture, float meanPerimeter, float meanArea, float meanSmoothness) {
+    public Patient(String firstName, String lastName, String email, String medicCode, LocalDate dateOfBirth, char sex, float cp, float trestbps, float cholesterol, float fbs, float thalach, float exang, float oldpeak, float slope, float ca, int noPregnancies, float glucose, float bloodPressure, float skinThickness, float insulin, float bmi, float diabetesPedigree, float meanRadius, float meanTexture, float meanPerimeter, float meanArea, float meanSmoothness) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
