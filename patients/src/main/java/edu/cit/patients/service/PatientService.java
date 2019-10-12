@@ -19,5 +19,11 @@ public interface PatientService {
 
     void updatePatientEmail(String emailOld, String emailNew);
 
+    void updateHeartDiseaseInfo(String email, Patient patient);
+
+    void updateDiabetesInfo(String email, Patient patient);
+
+    void updateBreastCancerInfo(String email, Patient patient);
+
     void deletePatient(String id);
 }

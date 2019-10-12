@@ -49,6 +49,24 @@ public class PatientController {
         return new ResponseEntity("Patient Email updated succesfully", HttpStatus.OK);
     }
 
+    @PatchMapping(value = "/{email}/heart")
+    public ResponseEntity<?> updateHeartDiseaseInfo(@PathVariable("email") String email, @RequestBody Patient patient) {
+        patientService.updateHeartDiseaseInfo(email, patient);
+        return new ResponseEntity("Patient Heart Diesease Information updated succesfully", HttpStatus.OK);
+    }
+
+    @PatchMapping(value = "/{email}/diabetes")
+    public ResponseEntity<?> updateDiabetesInfo(@PathVariable("email") String email, @RequestBody Patient patient) {
+        patientService.updateDiabetesInfo(email, patient);
+        return new ResponseEntity("Patient Diabetes Info updated succesfully", HttpStatus.OK);
+    }
+
+    @PatchMapping(value = "/{email}/breastcancer")
+    public ResponseEntity<?> updateBreastCancerInfo(@PathVariable("email") String email, Patient patient) {
+        patientService.updateBreastCancerInfo(email, patient);
+        return new ResponseEntity("Patient Breast Cancer Info updated succesfully", HttpStatus.OK);
+    }
+
     @DeleteMapping(value = "/{email}")
     public void deletePatient(@PathVariable("email") String email) {
         patientService.deletePatient(patientService.findByEmail(email).getId());
