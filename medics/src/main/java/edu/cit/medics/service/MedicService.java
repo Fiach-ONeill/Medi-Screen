@@ -1,6 +1,7 @@
 package edu.cit.medics.service;
 
 import edu.cit.medics.model.Medic;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -15,4 +16,7 @@ public interface MedicService {
     void updateMedicEmail(String emailOld, String emailNew);
 
     void deleteMedic(String id);
+
+
+    ResponseEntity getPatientByMedicCode(String medicCode);
 }

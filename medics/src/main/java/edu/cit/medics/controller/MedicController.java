@@ -16,7 +16,7 @@ public class MedicController {
     @Autowired
     private MedicService medicService;
 
-    @GetMapping(value = "/")
+    @GetMapping(value = "")
     public List<Medic> getAllMedics() {
         return medicService.findAll();
     }
@@ -33,13 +33,18 @@ public class MedicController {
     }
 
     @PatchMapping(value = "/{email}")
-    public ResponseEntity<?> updateMedic(@PathVariable("email") String emailOld, @RequestBody String emailNew) {
+    public ResponseEntity<?> updateMedicEmail(@PathVariable("email") String emailOld, @RequestBody String emailNew) {
         medicService.updateMedicEmail(emailOld, emailNew);
-        return new ResponseEntity("Medic updated succesfully", HttpStatus.OK);
+        return new ResponseEntity("Medic Email updated succesfully", HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/{email}")
     public void deleteMedic(@PathVariable("email") String email) {
         medicService.deleteMedic(medicService.findByEmail(email).getId());
+    }
+
+    @GetMapping(value = "/patients/{medicCode}")
+    public void getPatientsByMedicCode(@PathVariable("medicCode") String medicCode) {
+        medicService.getPatientByMedicCode(medicCode);
     }
 }
