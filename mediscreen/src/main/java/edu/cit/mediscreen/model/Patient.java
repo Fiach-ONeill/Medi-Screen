@@ -16,8 +16,7 @@ public class Patient {
 
     private static final String firstNameRegexp = "[A-ZÄÖÜ][a-zäöüß]+";
     private static final String lastNameRegexp = "[A-ZÄÖÜ][a-zäöüß]+([ '-][A-ZÄÖÜ][a-zäöüß]+)*";
-    private static final String medicCodeRegexp = "[A-ZÄÖÜ][a-zäöüß]+[A-ZÄÖÜ][1-9]{5}";
-
+    private static final String medicCodeRegexp = "[A-ZÄÖÜ][a-zäöüß]+[A-ZÄÖÜ][0-9]{5}";
 
     @JsonIgnore
     @Version
