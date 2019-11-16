@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -32,37 +33,37 @@ public class PatientController {
     }
 
     @PostMapping(value = "")
-    public ResponseEntity<?> postPatient(@RequestBody Patient patient) {
+    public ResponseEntity<?> postPatient(@Valid @RequestBody Patient patient) {
         patientService.savePatient(patient);
         return new ResponseEntity("Patient posted succesfully", HttpStatus.OK);
     }
 
     @PutMapping(value = "/{email}")
-    public ResponseEntity<?> putPatientInfo(@PathVariable("email") String email, @RequestBody Patient patient) {
+    public ResponseEntity<?> putPatientInfo(@PathVariable("email") String email, @Valid @RequestBody Patient patient) {
         patientService.updatePatientInfo(email, patient);
         return new ResponseEntity("Patient Info put succesfully", HttpStatus.OK);
     }
 
     @PatchMapping(value = "/{email}")
-    public ResponseEntity<?> patchPatientEmail(@PathVariable("email") String emailOld, @RequestBody String emailNew) {
+    public ResponseEntity<?> patchPatientEmail(@PathVariable("email") String emailOld, @Valid @RequestBody String emailNew) {
         patientService.updatePatientEmail(emailOld, emailNew);
         return new ResponseEntity("patched Patient Email succesfully", HttpStatus.OK);
     }
 
     @PatchMapping(value = "/{email}/heart")
-    public ResponseEntity<?> patchHeartDiseaseInfo(@PathVariable("email") String email, @RequestBody Patient patient) {
+    public ResponseEntity<?> patchHeartDiseaseInfo(@PathVariable("email") String email, @Valid @RequestBody Patient patient) {
         patientService.updateHeartDiseaseInfo(email, patient);
         return new ResponseEntity("patched Heart Disease Info succesfully", HttpStatus.OK);
     }
 
     @PatchMapping(value = "/{email}/diabetes")
-    public ResponseEntity<?> patchDiabetesInfo(@PathVariable("email") String email, @RequestBody Patient patient) {
+    public ResponseEntity<?> patchDiabetesInfo(@PathVariable("email") String email, @Valid @RequestBody Patient patient) {
         patientService.updateDiabetesInfo(email, patient);
         return new ResponseEntity("patched Diabetes Info succesfully", HttpStatus.OK);
     }
 
     @PatchMapping(value = "/{email}/breastcancer")
-    public ResponseEntity<?> patchBreastCancerInfo(@PathVariable("email") String email, @RequestBody Patient patient) {
+    public ResponseEntity<?> patchBreastCancerInfo(@PathVariable("email") String email, @Valid @RequestBody Patient patient) {
         patientService.updateBreastCancerInfo(email, patient);
         return new ResponseEntity("patched Breast Cancer Info succesfully", HttpStatus.OK);
     }

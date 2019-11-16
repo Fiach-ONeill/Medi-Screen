@@ -1,20 +1,23 @@
 package edu.cit.mediscreen.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Version;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 @Document(collection = "patients")
 public class Patient {
+
+    private static final String firstNameRegexp = "[A-ZÄÖÜ][a-zäöüß]+";
+    private static final String lastNameRegexp = "[A-ZÄÖÜ][a-zäöüß]+([ '-][A-ZÄÖÜ][a-zäöüß]+)*";
+    private static final String medicCodeRegexp = "[A-ZÄÖÜ][a-zäöüß]+[A-ZÄÖÜ][1-9]{5}";
+
 
     @JsonIgnore
     @Version
@@ -28,16 +31,29 @@ public class Patient {
     @CreatedDate
     private Date createdDate;
 
+    @Pattern(regexp = firstNameRegexp, message = "{patient.firstName.pattern}")
+    @Size(min = 2, max = 30)
+    @NotEmpty(message = "{patient.firstName.notEmpty}")
     private String firstName;
 
+    @Pattern(regexp = lastNameRegexp, message = "{patient.lastName.pattern]")
+    @Size(min = 2, max = 30)
+    @NotEmpty(message = "{patient.lastName.notEmpty}")
     private String lastName;
 
+    @Email(message = "{patient.email.pattern}")
+    @NotEmpty(message = "{patient.email.notEmpty}")
     private String email;
 
+    @Pattern(regexp = medicCodeRegexp, message = "{patient.medicCode.pattern}")
+    @NotEmpty(message = "{patient.medicCode.notEmpty}")
     private String medicCode;
 
     @JsonFormat(pattern = "dd/MM/yyyy")
+    @Past(message = "{patient.dateOfBirth.past}")
+
     private LocalDate dateOfBirth;
+
 
     private char sex;
 
@@ -59,6 +75,7 @@ public class Patient {
 
     private float ca;
 
+    @PositiveOrZero
     private int noPregnancies;
 
     private float glucose;

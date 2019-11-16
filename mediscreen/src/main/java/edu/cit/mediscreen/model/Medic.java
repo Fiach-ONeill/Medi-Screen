@@ -6,11 +6,18 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Version;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.util.Calendar;
 import java.util.Date;
 
 @Document(collection = "medics")
 public class Medic {
+
+    private static final String firstNameRegexp = "[A-ZÄÖÜ][a-zäöüß]+";
+    private static final String lastNameRegexp = "[A-ZÄÖÜ][a-zäöüß]+([ '-][A-ZÄÖÜ][a-zäöüß]+)*";
 
     @JsonIgnore
     @Version
@@ -24,10 +31,18 @@ public class Medic {
     @CreatedDate
     private Date createdDate;
 
+    @Pattern(regexp = firstNameRegexp, message = "{medic.firstName.pattern}")
+    @Size(min = 2, max = 30)
+    @NotEmpty(message = "{medic.firstName.notEmpty}")
     private String firstName;
 
+    @Pattern(regexp = lastNameRegexp, message = "{medic.lastName.pattern}")
+    @Size(min = 2, max = 30)
+    @NotEmpty(message = "{medic.lastName.notEmpty}")
     private String lastName;
 
+    @Email(message = "{medic.email.pattern}")
+    @NotEmpty(message = "{medic.email.notEmpty}")
     private String email;
 
     private String patientCode;
