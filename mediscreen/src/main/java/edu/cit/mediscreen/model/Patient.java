@@ -54,8 +54,8 @@ public class Patient {
 
     private LocalDate dateOfBirth;
 
-
-    private char sex;
+    @Pattern(regexp = "[MFD]", message = "{patient.sex.pattern}")
+    private String sex;
 
     private float cp;
 
@@ -133,7 +133,7 @@ public class Patient {
         return dateOfBirth;
     }
 
-    public char getSex() {
+    public String getSex() {
         return sex;
     }
 
@@ -263,7 +263,7 @@ public class Patient {
         this.dateOfBirth = LocalDate.parse(dateOfBirth, formatter);
     }
 
-    public void setSex(char sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 
@@ -356,7 +356,7 @@ public class Patient {
 
     }
 
-    public Patient(String firstName, String lastName, String email, String medicCode, LocalDate dateOfBirth, char sex, float cp, float trestbps, float cholesterol, float fbs, float thalach, float exang, float oldpeak, float slope, float ca, int noPregnancies, float glucose, float bloodPressure, float skinThickness, float insulin, float bmi, float diabetesPedigree, float meanRadius, float meanTexture, float meanPerimeter, float meanArea, float meanSmoothness) {
+    public Patient(String firstName, String lastName, String email, String medicCode, LocalDate dateOfBirth, String sex, float cp, float trestbps, float cholesterol, float fbs, float thalach, float exang, float oldpeak, float slope, float ca, int noPregnancies, float glucose, float bloodPressure, float skinThickness, float insulin, float bmi, float diabetesPedigree, float meanRadius, float meanTexture, float meanPerimeter, float meanArea, float meanSmoothness) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
