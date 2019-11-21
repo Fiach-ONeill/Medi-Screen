@@ -50,7 +50,6 @@ public class Patient {
 
     @JsonFormat(pattern = "dd/MM/yyyy")
     @Past(message = "{patient.dateOfBirth.past}")
-
     private LocalDate dateOfBirth;
 
     @Pattern(regexp = "[MFD]", message = "{patient.sex.pattern}")
