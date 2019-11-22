@@ -17,6 +17,7 @@ public class Patient {
     private static final String firstNameRegexp = "[A-ZÄÖÜ][a-zäöüß]+";
     private static final String lastNameRegexp = "[A-ZÄÖÜ][a-zäöüß]+([ '-][A-ZÄÖÜ][a-zäöüß]+)*";
     private static final String medicCodeRegexp = "[A-ZÄÖÜ][a-zäöüß]+[A-ZÄÖÜ][0-9]{5}";
+    private static final String phoneRegexp = "^\\s*(\\(?\\s*\\d{1,4}\\s*\\)?\\s*[\\d\\s]{5,10})\\s*$";
 
     @JsonIgnore
     @Version
@@ -44,9 +45,19 @@ public class Patient {
     @NotEmpty(message = "{patient.email.notEmpty}")
     private String email;
 
+    private String medicName;
+
     @Pattern(regexp = medicCodeRegexp, message = "{patient.medicCode.pattern}")
     @NotEmpty(message = "{patient.medicCode.notEmpty}")
     private String medicCode;
+
+    @Pattern(regexp = phoneRegexp, message = "{phone.pattern}")
+    private String medicPhone;
+
+    private String insuranceName;
+
+    @Pattern(regexp = phoneRegexp, message = "{phone.pattern}")
+    private String insurancePhone;
 
     @JsonFormat(pattern = "dd/MM/yyyy")
     @Past(message = "{patient.dateOfBirth.past}")
@@ -354,11 +365,20 @@ public class Patient {
 
     }
 
-    public Patient(String firstName, String lastName, String email, String medicCode, LocalDate dateOfBirth, String sex, float cp, float trestbps, float cholesterol, float fbs, float thalach, float exang, float oldpeak, float slope, float ca, int noPregnancies, float glucose, float bloodPressure, float skinThickness, float insulin, float bmi, float diabetesPedigree, float meanRadius, float meanTexture, float meanPerimeter, float meanArea, float meanSmoothness) {
+    public Patient(String firstName, String lastName, String email, String medicName, String medicCode,
+                   String medicPhone, String insuranceName, String insurancePhone, LocalDate dateOfBirth, String sex,
+                   float cp, float trestbps, float cholesterol, float fbs, float thalach, float exang, float oldpeak,
+                   float slope, float ca, int noPregnancies, float glucose, float bloodPressure, float skinThickness,
+                   float insulin, float bmi, float diabetesPedigree, float meanRadius, float meanTexture,
+                   float meanPerimeter, float meanArea, float meanSmoothness) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.medicName = medicName;
         this.medicCode = medicCode;
+        this.medicPhone = medicPhone;
+        this.insuranceName = insuranceName;
+        this.insurancePhone = insurancePhone;
         this.dateOfBirth = dateOfBirth;
         this.sex = sex;
         this.cp = cp;
