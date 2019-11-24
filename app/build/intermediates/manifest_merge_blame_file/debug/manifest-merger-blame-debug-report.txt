@@ -1,0 +1,262 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.patient_app"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:5:5-133:19
+12        android:allowBackup="true"
+12-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:6:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.1.0] C:\Users\Mantvydas Luksas\.gradle\caches\transforms-2\files-2.1\c527b78844be871c44103f6f45a963fb\core-1.1.0\AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:icon="@drawable/capture"
+15-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:7:9-41
+16        android:label="@string/app_name"
+16-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:8:9-41
+17        android:roundIcon="@mipmap/ic_launcher_round"
+17-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:9:9-54
+18        android:supportsRtl="true"
+18-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:10:9-35
+19        android:testOnly="true"
+20        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+20-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:11:9-65
+21        <activity
+21-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:13:9-22:20
+22            android:name="com.example.patient_app.MainActivity"
+22-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:14:13-41
+23            android:screenOrientation="portrait"
+23-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:15:13-49
+24            android:windowSoftInputMode="adjustPan" >
+24-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:16:13-52
+25            <intent-filter>
+25-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:17:13-21:29
+26                <action android:name="android.intent.action.MAIN" />
+26-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:18:17-69
+26-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:18:25-66
+27
+28                <category android:name="android.intent.category.LAUNCHER" />
+28-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:20:17-77
+28-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:20:27-74
+29            </intent-filter>
+30        </activity>
+31        <activity
+31-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:23:9-33:20
+32            android:name="com.example.patient_app.Login_Form"
+32-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:24:13-39
+33            android:label="Login"
+33-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:25:13-34
+34            android:screenOrientation="portrait"
+34-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:26:13-49
+35            android:windowSoftInputMode="adjustPan" >
+35-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:27:13-52
+36            <intent-filter>
+36-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:28:13-32:29
+37                <action android:name="android.intent.action.VIEW" />
+37-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:17-69
+37-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:25-66
+38
+39                <category android:name="android.intent.category.DEFAULT" />
+39-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:17-76
+39-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:27-73
+40            </intent-filter>
+41        </activity>
+42        <activity
+42-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:34:9-44:20
+43            android:name="com.example.patient_app.SignUp_Form"
+43-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:35:13-40
+44            android:label="Sign Up"
+44-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:36:13-36
+45            android:screenOrientation="portrait"
+45-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:37:13-49
+46            android:windowSoftInputMode="adjustPan" >
+46-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:38:13-52
+47            <intent-filter>
+47-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:28:13-32:29
+48                <action android:name="android.intent.action.VIEW" />
+48-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:17-69
+48-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:25-66
+49
+50                <category android:name="android.intent.category.DEFAULT" />
+50-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:17-76
+50-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:27-73
+51            </intent-filter>
+52        </activity>
+53        <activity
+53-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:45:9-55:20
+54            android:name="com.example.patient_app.Home"
+54-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:46:13-33
+55            android:label="Home Screen"
+55-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:47:13-40
+56            android:screenOrientation="portrait"
+56-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:48:13-49
+57            android:windowSoftInputMode="adjustPan" >
+57-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:49:13-52
+58            <intent-filter>
+58-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:28:13-32:29
+59                <action android:name="android.intent.action.VIEW" />
+59-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:17-69
+59-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:25-66
+60
+61                <category android:name="android.intent.category.DEFAULT" />
+61-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:17-76
+61-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:27-73
+62            </intent-filter>
+63        </activity>
+64        <activity
+64-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:56:9-66:20
+65            android:name="com.example.patient_app.Medical_History"
+65-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:57:13-44
+66            android:label="Medical History"
+66-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:58:13-44
+67            android:screenOrientation="portrait"
+67-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:59:13-49
+68            android:windowSoftInputMode="adjustPan" >
+68-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:60:13-52
+69            <intent-filter>
+69-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:28:13-32:29
+70                <action android:name="android.intent.action.VIEW" />
+70-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:17-69
+70-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:25-66
+71
+72                <category android:name="android.intent.category.DEFAULT" />
+72-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:17-76
+72-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:27-73
+73            </intent-filter>
+74        </activity>
+75        <activity
+75-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:67:9-77:20
+76            android:name="com.example.patient_app.Medi_Ai"
+76-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:68:13-36
+77            android:label="Medi Ai"
+77-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:69:13-36
+78            android:screenOrientation="portrait"
+78-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:70:13-49
+79            android:windowSoftInputMode="adjustPan" >
+79-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:71:13-52
+80            <intent-filter>
+80-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:28:13-32:29
+81                <action android:name="android.intent.action.VIEW" />
+81-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:17-69
+81-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:25-66
+82
+83                <category android:name="android.intent.category.DEFAULT" />
+83-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:17-76
+83-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:27-73
+84            </intent-filter>
+85        </activity>
+86        <activity
+86-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:78:9-88:20
+87            android:name="com.example.patient_app.Contact_Page"
+87-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:79:13-41
+88            android:label="Contact Form"
+88-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:80:13-41
+89            android:screenOrientation="portrait"
+89-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:81:13-49
+90            android:windowSoftInputMode="adjustPan" >
+90-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:82:13-52
+91            <intent-filter>
+91-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:28:13-32:29
+92                <action android:name="android.intent.action.VIEW" />
+92-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:17-69
+92-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:25-66
+93
+94                <category android:name="android.intent.category.DEFAULT" />
+94-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:17-76
+94-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:27-73
+95            </intent-filter>
+96        </activity>
+97        <activity
+97-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:89:9-99:20
+98            android:name="com.example.patient_app.Call_Page"
+98-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:90:13-38
+99            android:label="Request Professional"
+99-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:91:13-49
+100            android:screenOrientation="portrait"
+100-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:92:13-49
+101            android:windowSoftInputMode="adjustPan" >
+101-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:93:13-52
+102            <intent-filter>
+102-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:28:13-32:29
+103                <action android:name="android.intent.action.VIEW" />
+103-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:17-69
+103-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:25-66
+104
+105                <category android:name="android.intent.category.DEFAULT" />
+105-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:17-76
+105-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:27-73
+106            </intent-filter>
+107        </activity>
+108        <activity
+108-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:100:9-110:20
+109            android:name="com.example.patient_app.SettingsActivity"
+109-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:101:13-45
+110            android:label="Request Professional"
+110-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:102:13-49
+111            android:screenOrientation="portrait"
+111-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:103:13-49
+112            android:windowSoftInputMode="adjustPan" >
+112-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:104:13-52
+113            <intent-filter>
+113-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:28:13-32:29
+114                <action android:name="android.intent.action.VIEW" />
+114-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:17-69
+114-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:25-66
+115
+116                <category android:name="android.intent.category.DEFAULT" />
+116-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:17-76
+116-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:27-73
+117            </intent-filter>
+118        </activity>
+119        <activity
+119-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:111:9-121:16
+120            android:name="com.example.patient_app.Rating_Page"
+120-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:112:9-36
+121            android:label="Request Professional"
+121-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:113:9-45
+122            android:screenOrientation="portrait"
+122-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:114:9-45
+123            android:windowSoftInputMode="adjustPan" >
+123-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:115:9-48
+124            <intent-filter>
+124-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:28:13-32:29
+125                <action android:name="android.intent.action.VIEW" />
+125-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:17-69
+125-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:25-66
+126
+127                <category android:name="android.intent.category.DEFAULT" />
+127-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:17-76
+127-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:27-73
+128            </intent-filter>
+129        </activity>
+130        <activity
+130-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:122:9-132:20
+131            android:name="com.example.patient_app.Payment_Page"
+131-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:123:13-41
+132            android:label="Insurance Premium Payment"
+132-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:124:13-54
+133            android:screenOrientation="portrait"
+133-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:125:13-49
+134            android:windowSoftInputMode="adjustPan" >
+134-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:126:13-52
+135            <intent-filter>
+135-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:28:13-32:29
+136                <action android:name="android.intent.action.VIEW" />
+136-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:17-69
+136-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:29:25-66
+137
+138                <category android:name="android.intent.category.DEFAULT" />
+138-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:17-76
+138-->C:\Users\Public\patient_app\app\src\main\AndroidManifest.xml:31:27-73
+139            </intent-filter>
+140        </activity>
+141    </application>
+142
+143</manifest>

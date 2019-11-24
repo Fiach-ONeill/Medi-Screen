@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/scrollViewer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/general_background"
+    android:orientation="vertical"
+    tools:context=".SignUp_Form"
+    >
+
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/app_bar2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+
+        >
+    </include>
+
+        <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+
+    >
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColor="@color/background"
+        android:layout_marginTop="40dp"
+        android:theme="@style/TextLabel"
+        >
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_first_name"
+            android:ems="14"
+            android:inputType="text"
+            android:textSize="16sp"
+             />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:textColor="@color/background"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/background"
+        android:theme="@style/TextLabel"
+        >
+
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_last_name"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:textColor="@color/background"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:textColor="@color/background"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/background"
+        android:theme="@style/TextLabel"
+        >
+
+        <EditText
+            android:id="@+id/dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/dd_mm_yy"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="@color/background"
+            android:textSize="16sp"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:textColor="@color/background"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/background"
+        android:theme="@style/TextLabel"
+        >
+
+        <EditText
+            android:id="@+id/medicCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_medic_code"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="@color/background"
+            android:textSize="16sp"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+        android:textColor="@color/background"
+    android:focusableInTouchMode="true"
+    android:textColorHint="@color/background"
+        android:theme="@style/TextLabel"
+    >
+
+    <EditText
+        android:id="@+id/gp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/gp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="@color/background"
+        android:textSize="16sp"
+        android:autofillHints="" />
+</com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:textColor="@color/background"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/background"
+        android:theme="@style/TextLabel"
+        >
+
+        <EditText
+            android:id="@+id/gpNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/GpNumber"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="@color/background"
+            android:textSize="16sp"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:textColor="@color/background"
+                android:focusableInTouchMode="true"
+                android:textColorHint="@color/background"
+                android:theme="@style/TextLabel"
+                >
+
+                <EditText
+                    android:id="@+id/gpEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_gp_email"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/background"
+                    android:textSize="16sp"
+                    android:autofillHints="" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColor="@color/background"
+        android:textColorHint="@color/background"
+        android:theme="@style/TextLabel"
+        >
+
+        <EditText
+            android:id="@+id/insuranceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/insurance"
+            android:ems="10"
+            android:textColor="@color/background"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:textColor="@color/background"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/background"
+        android:theme="@style/TextLabel"
+        >
+
+        <EditText
+            android:id="@+id/insuranceNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/insuranceNumber"
+            android:ems="10"
+            android:textColor="@color/background"
+            android:inputType="number"
+            android:textSize="16sp"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:textColor="@color/background"
+                android:focusableInTouchMode="true"
+                android:textColorHint="@color/background"
+                android:theme="@style/TextLabel"
+                >
+
+                <EditText
+                    android:id="@+id/insuranceEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_insurance_email"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/background"
+                    android:textSize="16sp"
+                    android:autofillHints="" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/background"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/background"
+        android:theme="@style/TextLabel"
+        >
+
+        <EditText
+            android:id="@+id/email_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_address"
+            android:ems="10"
+            android:textColor="@color/background"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:textColor="@color/background"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/background"
+        android:theme="@style/TextLabel"
+        >
+
+        <EditText
+            android:id="@+id/email_address_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_address_confirm"
+            android:ems="10"
+            android:textColor="@color/background"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:textColor="@color/background"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/background"
+        android:theme="@style/TextLabel"
+        >
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/new_password"
+            android:ems="10"
+            android:textColor="@color/background"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:textColor="@color/background"
+        android:focusableInTouchMode="true"
+        android:textColorHint="@color/background"
+        android:theme="@style/TextLabel"
+        >
+
+        <EditText
+            android:id="@+id/passwordConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/confirm_password"
+            android:ems="10"
+            android:textColor="@color/background"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:textColor="@color/background"
+        android:popupBackground="@drawable/black_background_action_bar"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/sign_up_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/background"
+        android:text="@string/sign_up"
+        android:layout_marginLeft="20dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/button_style"
+        android:padding="4dp"
+        />
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+

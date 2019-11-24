@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">Medi-Screen</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="enter_first_name">Enter your first name</string>
+    <string name="enter_last_name">Enter your last name</string>
+    <string name="dd_mm_yy">dd/mm/yy (d.o.b)</string>
+    <string name="medic_code">Medic code</string>
+    <string name="layout">center</string>
+    <string name="enter_medic_code">Enter medic code</string>
+    <string name="email_address">Enter email address</string>
+    <string name="email_address_confirm">Confirm email address</string>
+    <string name="new_password">Create new password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="password">Enter password</string>
+    <string name="forgot">Forgot password</string>
+    <string name="gp">GP name</string>
+    <string name="GpNumber">GP phone number</string>
+    <string name="insurance">Insurance name</string>
+    <string name="insuranceNumber">Insurance phone number</string>
+    <string name="forgotPassword">Change Password</string>
+    <string name="home">Home</string>
+    <string name="enter_medical_history">Enter Medical History</string>
+    <string name="medi_ai">Medi-AI</string>
+    <string name="support">Support</string>
+    <string name="call_gp_insurance">Call GP/Insurance</string>
+    <string name="medical_history">Medical History</string>
+    <string name="enter_age">Enter age</string>
+    <string name="enter_sex">Enter sex</string>
+    <string name="enter_gender">Enter gender</string>
+    <string name="enter_cp">Enter cp</string>
+    <string name="enter_trestbps">Enter trestbps</string>
+    <string name="enter_cholesterol">Enter cholesterol</string>
+    <string name="enter_fbs">Enter fbs</string>
+    <string name="enter_thalach">Enter thalach</string>
+    <string name="enter_exang">Enter exang</string>
+    <string name="enter_old_peak">Enter old peak</string>
+    <string name="enter_slope">Enter slope</string>
+    <string name="enter_ca">Enter ca</string>
+    <string name="enter_number_of_pregnancies">Enter number of pregnancies</string>
+    <string name="number_of_pregnancies">number of pregnancies</string>
+    <string name="pregnancies">pregnancies</string>
+    <string name="enter_blood_pressure">Enter blood pressure</string>
+    <string name="enter_glucose">Enter glucose</string>
+    <string name="enter_skin_thickness">Enter skin thickness</string>
+    <string name="enter_insulin">Enter insulin</string>
+    <string name="enter_bmi">Enter bmi</string>
+    <string name="enter_diabetes_pedigree">Enter diabetes pedigree</string>
+    <string name="enter_restecg">Enter restecg</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="skin_thickness">Skin Thickness</string>
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="diabetes_pedigree">Diabetes pedigree</string>
+    <string name="medi_ai_1">Medi Ai</string>
+    <string name="view_diagnostic">View Diagnostic</string>
+    <string name="return_to_menu">Return to menu</string>
+    <string name="contact_form">Contact Form</string>
+    <string name="enter_gp_email">Enter GP email</string>
+    <string name="enter_insurance_email">Enter insurance email</string>
+    <string name="type_your_message_here">Type your message here</string>
+    <string name="send">send</string>
+    <string name="request_professional">Request professional</string>
+    <string name="call">Call</string>
+    <string name="call_gp">Call GP</string>
+    <string name="call_insurance">Call Insurance</string>
+    <string name="ratingButton">ratingButton</string>
+    <string name="paymentButton">paymentButton</string>
+    <string-array name="Genders">
+        <item>What is your gender?</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="Emails">
+        <item>Choose an email</item>
+        <item>Email 1</item>
+        <item>Email 2</item>
+    </string-array>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="settings">Settings</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="pay_insurance">Pay Insurance</string>
+    <string name="your_feedback_matters">Your feedback matters</string>
+    <string name="write_your_review_here_optional">Write your review here (optional)</string>
+    <string name="your_value">Your value:</string>
+    <string name="pay_now">Pay now</string>
+
+</resources>

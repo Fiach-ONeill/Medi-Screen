@@ -1,0 +1,68 @@
+<!--
+  ~ Copyright 2018 The app Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Change Details"
+        android:layout="@layout/preferences_category">
+
+        <EditTextPreference
+
+        app:key="emails"
+        app:title="Your email"
+        android:inputType="textEmailAddress"
+        app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+
+            app:key="password"
+            app:title="Your password"
+            app:useSimpleSummaryProvider="true" />
+
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Rate Our App"
+        android:layout="@layout/preferences_category">
+
+        <Preference
+            android:id="@+id/rateOurApplication"
+            android:layout="@layout/rating_button"
+            android:key="@string/ratingButton"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Payment"
+        android:layout="@layout/preferences_category">
+
+        <Preference
+            android:id="@+id/makePayment"
+            android:layout="@layout/payment_button"
+            android:key="@string/paymentButton"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+    </PreferenceCategory>
+
+
+
+
+
+</PreferenceScreen>

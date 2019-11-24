@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:weightSum="10"
+    android:baselineAligned="false" android:orientation="horizontal">
+    <TextView
+        android:text="@string/pay_insurance"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="7dp"
+        android:textColor="@color/background"
+        android:gravity="center"
+        android:background="@drawable/black_background"
+        >
+    </TextView>
+
+</LinearLayout>
