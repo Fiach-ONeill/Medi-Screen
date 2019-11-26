@@ -1,0 +1,63 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body{
+  background-image: url(Images/general_background.jpg);
+  background-size: 100%;
+}
+.menu{
+  display: flex;
+  position: relative;
+
+}
+.menu .sidebar{
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background: #909497;
+  padding: 30px 0;
+}
+.menu .sidebar h2{
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.menu .sidebar ul li{
+  padding: 15px;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+
+}
+.menu .sidebar ul li a{
+  color: black;
+  display: block;
+  text-align: center;
+}
+.menu .sidebar ul li a .fas{
+  width: 30px;
+}
+.menu .sidebar ul li:hover{
+  background: grey:
+}
+.menu .sidebar ul li:hover a{
+  color: green;
+}
+.main_medic{
+  margin-left: 260px;
+  padding: 20px;
+}
+.content .textbox{
+  padding: 5px;
+}
+.content .logout{
+  text-align: right;
+}
+.content{
+  border-bottom: 1px solid black;
+}
