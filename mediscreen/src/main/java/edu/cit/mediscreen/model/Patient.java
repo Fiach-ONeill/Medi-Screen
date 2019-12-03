@@ -11,12 +11,16 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
+/*
+Entity-class with properties for 'patient'
+@author: Simon Wolf
+ */
 @Document(collection = "patients")
 public class Patient {
 
     private static final String firstNameRegexp = "[A-ZÄÖÜ][a-zäöüß]+";
     private static final String lastNameRegexp = "[A-ZÄÖÜ][a-zäöüß]+([ '-][A-ZÄÖÜ][a-zäöüß]+)*";
-    private static final String medicCodeRegexp = "[A-ZÄÖÜ][a-zäöüß]+[A-ZÄÖÜ][0-9]{5}";
+    private static final String medicCodeRegexp = "[A-ZÄÖÜ][a-zäöüß]+[A-ZÄÖÜ][0-9]{4,5}";
     private static final String phoneRegexp = "^\\s*(\\(?\\s*\\d{1,4}\\s*\\)?\\s*[\\d\\s]{5,10})\\s*$";
 
     @JsonIgnore
@@ -54,10 +58,16 @@ public class Patient {
     @Pattern(regexp = phoneRegexp, message = "{phone.pattern}")
     private String medicPhone;
 
+    @Email
+    private String medicEmail;
+
     private String insuranceName;
 
     @Pattern(regexp = phoneRegexp, message = "{phone.pattern}")
     private String insurancePhone;
+
+    @Email
+    private String insuranceEmail;
 
     @JsonFormat(pattern = "dd/MM/yyyy")
     @Past(message = "{patient.dateOfBirth.past}")
@@ -134,8 +144,24 @@ public class Patient {
         return email;
     }
 
+    public String getMedicName() {
+        return medicName;
+    }
+
     public String getMedicCode() {
         return medicCode;
+    }
+
+    public String getMedicPhone() {
+        return medicPhone;
+    }
+
+    public String getInsuranceName() {
+        return insuranceName;
+    }
+
+    public String getInsurancePhone() {
+        return insurancePhone;
     }
 
     public LocalDate getDateOfBirth() {
@@ -259,8 +285,22 @@ public class Patient {
         this.email = email;
     }
 
+    public void setMedicName(String medicName) { this.medicName = medicName; }
+
     public void setMedicCode(String medicCode) {
         this.medicCode = medicCode;
+    }
+
+    public void setMedicPhone(String medicPhone) {
+        this.medicPhone = medicPhone;
+    }
+
+    public void setInsuranceName(String insuranceName) {
+        this.insuranceName = insuranceName;
+    }
+
+    public void setInsurancePhone(String insurancePhone) {
+        this.insurancePhone = insurancePhone;
     }
 
     public void setDateOfBirth(LocalDate dateOfBirth) {

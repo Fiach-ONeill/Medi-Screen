@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+/*
+Controller-class with router functionality for the REST interface for entity 'patient'
+@author: Simon Wolf
+ */
 @RestController
 @RequestMapping("/patients")
 public class PatientController {
@@ -34,8 +38,12 @@ public class PatientController {
 
     @PostMapping(value = "")
     public ResponseEntity<?> postPatient(@Valid @RequestBody Patient patient) {
-        patientService.savePatient(patient);
-        return new ResponseEntity("Patient posted succesfully", HttpStatus.OK);
+        try {
+            patientService.savePatient(patient);
+            return new ResponseEntity("Patient posted succesfully", HttpStatus.OK);
+        } catch(Exception e) {
+            return new ResponseEntity("Invalid Medic-code entered", HttpStatus.BAD_REQUEST);
+        }
     }
 
     @PutMapping(value = "/{email}")

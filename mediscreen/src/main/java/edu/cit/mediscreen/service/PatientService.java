@@ -4,6 +4,10 @@ import edu.cit.mediscreen.model.Patient;
 
 import java.util.List;
 
+/*
+interface for service logic for entity 'patient'
+@author: Simon Wolf
+ */
 public interface PatientService {
 
     List<Patient> findAll();

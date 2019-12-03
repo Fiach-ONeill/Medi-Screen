@@ -1,17 +1,26 @@
 package edu.cit.mediscreen.service;
 
+import edu.cit.mediscreen.model.Medic;
 import edu.cit.mediscreen.model.Patient;
+import edu.cit.mediscreen.repository.MedicRepository;
 import edu.cit.mediscreen.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/*
+class that implements interface 'PatientService' for service logic
+@author: Simon Wolf
+ */
 @Service
 public class PatientServiceImpl implements PatientService {
 
     @Autowired
     private PatientRepository patientRepository;
+
+    @Autowired
+    private MedicRepository medicRepository;
 
     @Override
     public List<Patient> findAll() {
@@ -30,8 +39,14 @@ public class PatientServiceImpl implements PatientService {
 
     @Override
     public void savePatient(Patient patient) {
+        Medic medic = medicRepository.findByPatientCode(patient.getMedicCode());
+        String medicCode = medic.getPatientCode();
+        if(!medicCode.equals(patient.getMedicCode())) {
+            throw new NullPointerException();
+        }
         patient.setCreatedDate();
         patientRepository.save(patient);
+
     }
 
     @Override

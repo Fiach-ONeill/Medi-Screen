@@ -13,6 +13,10 @@ import javax.validation.constraints.Size;
 import java.util.Calendar;
 import java.util.Date;
 
+/*
+Entity class with properties for 'medic'
+@author: Simon Wolf
+ */
 @Document(collection = "medics")
 public class Medic {
 

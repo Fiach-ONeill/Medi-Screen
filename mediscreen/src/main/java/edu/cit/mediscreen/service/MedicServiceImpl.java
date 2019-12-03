@@ -7,6 +7,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/*
+class that implements interface 'MedicService' for service logic
+@author: Simon Wolf
+ */
 @Service
 public class MedicServiceImpl implements MedicService {
 
@@ -22,6 +26,9 @@ public class MedicServiceImpl implements MedicService {
     public Medic findMedicByEmail(String email) {
         return medicRepository.findByEmail(email);
     }
+
+    @Override
+    public Medic findMedicByPatientCode(String patientCode) { return medicRepository.findByPatientCode(patientCode); }
 
     @Override
     public void saveMedic(Medic medic) {
