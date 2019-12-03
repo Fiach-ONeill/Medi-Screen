@@ -1,0 +1,187 @@
+
+*
+{
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+.main
+{
+  width: 100%;
+  height: 100vh;
+  background-image: url(Images/homeBack.jpg);
+  background-size: cover;
+
+}
+nav
+{
+  width: 100%;
+  height: 80.8px;
+  background-color: white;
+  opacity: 0.8;
+  line-height: 80px;
+}
+nav ul
+{
+  float: right;
+  margin-right: 30px;
+}
+nav ul li
+{
+  list-style-type: none;
+  display: inline-block;
+  transition: 0.8s all;
+}
+nav ul li:hover
+{
+  background-image: url(Images/black_background_website_2.jpg);
+}
+nav ul li:hover a{
+  color: #ffffff;
+}
+nav ul li a
+{
+  text-decoration: none;
+  color: #033758;
+  padding: 30px;
+  font-weight: bold;
+}
+body
+{
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+ background: url(Images/login_back.jpg);
+ background-size: cover;
+}
+.login-box
+{
+  width: 280px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #033758;
+}
+.login-box h1
+{
+  float: left;
+  font-size: 30px;
+  border-bottom: 5px solid #033758;
+  margin-bottom: 30px;
+  padding: 14px;
+}
+.login-box a
+{
+  color: #033758;
+}
+.textbox
+{
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 8px 0;
+  margin: 8px 0;
+  border-bottom: 2px solid #033758;
+}
+.textbox i
+{
+  width: 26px;
+  float: left;
+  text-align: center;
+}
+.textbox input
+{
+  border: none;
+  outline: none;
+  background: none;
+  color: black;
+  font-size: 18px;
+  width: 80%;
+  float: left;
+  margin: 0 10px;
+}
+.btn
+{
+  width: 100%;
+  height: 40px;
+  background-image: url(Images/black_background_website.jpg);
+  color: #ffffff;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 12px;
+  display: inline-block;
+}
+.btn:hover
+{
+  background-image: url(Images/blue_button_background_website.jpg);
+}
+.retbtn
+{
+  width: auto;
+  height: 40px;
+  background-image: url(Images/black_background_website.jpg);
+  color: #ffffff;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 18px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: inline-block;
+
+}
+.retbtn:hover
+{
+  background-image: url(Images/blue_button_background_website.jpg);
+}
+.box
+{
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-sizing: border-box;
+  background: #909497;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  display: flex;
+  opacity: 0.9;
+}
+.box .imgbox
+{
+  width: 10px;
+  flex: 0 0 160px;
+
+}
+.box .imgbox img
+{
+  max-width: 100%;
+}
+.box .content
+{
+  padding-left: 30px;
+}
+.box .content h2
+{
+  color: #033758;
+  font-weight: bold;
+  font-size: 24px;
+}
+.bottom
+{
+  background: grey;
+  padding: 50px;
+  color: #033758
+}
+.bottom p
+{
+  font-size: 20px;
+}
+.bottom h1
+{
+  font-weight: bold;
+}
