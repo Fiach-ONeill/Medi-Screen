@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Medic Web</title>
@@ -6,6 +7,11 @@
   <link href="medic_styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
+
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
     <div class="menu">
       <div class="sidebar">
         <h2>MENU</h2>
@@ -13,8 +19,7 @@
           <li><a href="#"><i class="fas fa-user" aria-hidden="true"></i>Home</a></li>
           <li><a href="#"><i class="fas fa-user-injured"></i>Patients</a></li>
           <li><a href="#"><i class="fas fa-user-cog"></i>Settings</a></li>
-          <li><a href="#">QQQQQQ</a></li>
-          <li><a href="#">QQQQ</a></li>
+
         </ul>
       </div>
 
@@ -24,7 +29,7 @@
       <div class="content">
 
         <div class="logout">
-          <input class="btn" type="button" name="logout" value="Logout">
+          <input class="btn" type="button" name="logout" value="Logout" id="logoutButton">
         </div>
 
       <h1>Welcome to the Medi Web</h1>
@@ -43,11 +48,14 @@
               <th>First Name</th>
               <th>Last Name</th>
               <th>Email</th>
-              <th>Patient Code</th>
-              <th>View</th>
+              <th>Date of Birth</th>
+              <th>Gender</th>
+              <th>Age</th>
+
              </tr>
            </thead>
-           <tbody>
+
+           <tbody id="table_body">
 
 
            </tbody>
@@ -56,6 +64,24 @@
       </div>
 
     </div>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCl76uANYsmAKyu26Zxlj83whOpAtdSkXU",
+        authDomain: "patientapp-755d2.firebaseapp.com",
+        databaseURL: "https://patientapp-755d2.firebaseio.com",
+        projectId: "patientapp-755d2",
+        storageBucket: "patientapp-755d2.appspot.com",
+        messagingSenderId: "527484410783",
+        appId: "1:527484410783:web:850bbf6ca6f0d50e1cbbaa"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+    </script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src ="login.js"></script>
+
 
 
     </body>
