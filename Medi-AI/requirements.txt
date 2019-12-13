@@ -1,0 +1,7 @@
+tensorflow
+keras
+numpy
+flask
+flask_restful
+pickle
+os
