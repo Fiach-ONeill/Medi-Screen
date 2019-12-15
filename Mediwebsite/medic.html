@@ -14,35 +14,28 @@
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
     <div class="menu">
       <div class="sidebar">
-        <h2>MENU</h2>
+        <img src="Images/web_logo2.png" width="500" height="80">
+        <h2>MEDI-WEB</h2>
         <ul>
-          <li><a href="#"><i class="fas fa-user" aria-hidden="true"></i>Home</a></li>
-          <li><a href="#"><i class="fas fa-user-injured"></i>Patients</a></li>
-          <li><a href="#"><i class="fas fa-user-cog"></i>Settings</a></li>
-
+          <li><h5>Medic Information:</h5></li>
+          <li><p id="code">Code:</p></li>
+          <li><p id="email">Email:</p></li>
+          <li><p id="fName">First name:</p></li>
+          <li><p id="lName">Last name:</p></li>
         </ul>
       </div>
-
     </div>
 
     <div class="main_medic">
       <div class="content">
-
         <div class="logout">
           <input class="btn" type="button" name="logout" value="Logout" id="logoutButton">
         </div>
-
       <h1>Welcome to the Medi Web</h1>
-
-      <div class="textbox">
-      <p>Search for patient: <input type="text" name="findPatient" placeholder="Patient Code" value="">
-      <input class="btn" type="button" name="search" value="Search"></p>
-      </div>
-
       </div>
 
       <div class="cointainer mb-5 mt-3">
-         <table class="table table-striped table-bordered mydatatable" style="width:100%">
+         <table class="table table-bordered" style="width:100%">
            <thead>
              <tr>
               <th>First Name</th>
@@ -51,19 +44,15 @@
               <th>Date of Birth</th>
               <th>Gender</th>
               <th>Age</th>
-
+              <th>View</th>
              </tr>
            </thead>
 
            <tbody id="table_body">
-
-
            </tbody>
-
-
       </div>
-
     </div>
+    
     <script>
       // Your web app's Firebase configuration
       var firebaseConfig = {

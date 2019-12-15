@@ -5,6 +5,16 @@ auth.onAuthStateChanged(function(user) {
 
       var code = snapshot.val().code;
 
+      var codeTest = snapshot.child("code").val();
+      var email = snapshot.child("email").val();
+      var firstName = snapshot.child("firstName").val();
+      var lastName = snapshot.child("lastName").val();
+
+      $("#code").append("  " + codeTest);
+      $("#email").append("  " + email);
+      $("#fName").append("  " + firstName);
+      $("#lName").append("  " + lastName);
+
       var ref = firebase.database().ref().child("Patients").orderByChild("medicCode").equalTo(code);
 
       ref.on('value', snap=>{
@@ -27,7 +37,7 @@ auth.onAuthStateChanged(function(user) {
               $("#table_body").append("<tr><td>" + firstName + "</td><td>" + lastName + "</td><td>" + email + "</td><td>" + dob + "</td><td>" + gender + "</td><td>" + age + "</td></tr>");
 
         });
-        window.alert(key);
+        //window.alert(key);
       });
 
       });
@@ -136,6 +146,46 @@ window.location = 'medic.html'
   window.alert("Error " + errorMessage);
   // ...
 });
+
+
+}
+
+function resetPass(){
+var email = document.getElementById('theEmail').value;
+
+firebase.auth().sendPasswordResetEmail(email).then(function(){
+
+window.alert("Password Reset Email Sent");
+
+}).catch(function (error){
+
+var errorCode = error.code;
+var errorMessage = error.message;
+if(errorCode == 'auth/invalid-email'){
+
+window.alert(errorMessage);
+
+
+}else if (errorCode == 'auth/user-not-found'){
+
+
+
+window.alert(errorMessage);
+
+}
+
+});
+
+
+}
+
+function search(){
+
+  var searchItem = document.getElementById('searchName').value;
+  window.alert(searchItem);
+
+
+window.location = 'patient.html'
 
 
 }
